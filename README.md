@@ -69,3 +69,6 @@ This repository **does not include any personal or real health data**.
    ```
 
 Each script produces plots and prints performance metrics.
+
+## License
+This project is licensed under the GPL-3.0 License.
