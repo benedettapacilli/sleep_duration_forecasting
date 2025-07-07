@@ -1,9 +1,20 @@
 # 💤 Sleep Duration Forecasting with Operational Analytics
 
 This project analyzes and forecasts **daily sleep duration** using data collected from a Mi Band device, applying three different predictive modeling techniques:
-- **ARIMA**,
-- **MLP (Multilayer Perceptron)**,
-- **Random Forest Regressor**.
+- **ARIMA** — a classical statistical approach for univariate time series,
+- **MLP (Multilayer Perceptron)** — a feedforward neural network built with PyTorch,
+- **Random Forest Regressor** — a machine learning model using lagged features and recursive prediction.
+
+All models were trained and evaluated on the same 80/20 train-test split.  
+Performance was measured using MAE, RMSE, and MAPE metrics.
+
+| Model         | MAE    | RMSE   | MAPE   |
+|---------------|--------|--------|--------|
+| ARIMA         | ~82.8  | ~105.6 | ~9.4%  |
+| MLP           | ~89.4  | ~120.2 | ~10.1% |
+| Random Forest | ~108.5 | ~135.5 | ~12.8% |
+
+Statistical testing (Wilcoxon signed-rank test) revealed statistically significant differences between the models. Residuals from all models passed the Shapiro-Wilk normality test.
 
 ---
 
@@ -31,7 +42,7 @@ sleep_duration_forecasting/
 
 This repository **does not include any personal or real health data**.  
 - The original Mi Band data and model predictions have been excluded for privacy.
-- A **synthetic example CSV** is provided in `src/data/` to demonstrate expected input structure.
+- A **synthetic example CSV** is provided in `src/data/` to demonstrate the expected input structure.
 
 ## 📈 How to Run
 
