@@ -58,7 +58,12 @@ This repository **does not include any personal or real health data**.
    ...
    ```
 
-2. Run the desired scripts, for instance:
+2. Install the required Python packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run the desired scripts, for instance:
    ```bash
    python src/arima_forecast.py
    ```
